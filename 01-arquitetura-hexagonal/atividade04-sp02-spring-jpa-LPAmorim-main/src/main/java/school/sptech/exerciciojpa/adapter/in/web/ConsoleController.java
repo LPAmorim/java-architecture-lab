@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.*;
 
 import school.sptech.exerciciojpa.adapter.in.web.dto.ConsoleRequestDto;
 import school.sptech.exerciciojpa.adapter.in.web.dto.ConsoleResponseDto;
-import school.sptech.exerciciojpa.domain.exception.ConsoleNotFoundException;
 import school.sptech.exerciciojpa.domain.port.in.ConsoleUseCase;
 
 import java.util.List;
