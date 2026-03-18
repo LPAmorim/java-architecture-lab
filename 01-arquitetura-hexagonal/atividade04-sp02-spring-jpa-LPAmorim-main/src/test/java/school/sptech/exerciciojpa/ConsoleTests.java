@@ -119,7 +119,7 @@ public class ConsoleTests {
             var result = mockMvc.perform(post("/consoles")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(requestBody))
-                  .andExpect(status().isOk())
+                  .andExpect(status().isCreated())
                   .andReturn();
 
             var responseBody = result.getResponse().getContentAsString();

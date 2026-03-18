@@ -1,9 +1,6 @@
 package school.sptech.exerciciojpa.adapter.out.persistence.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 /**
  * Entidade JPA — mapeamento para a tabela do banco.
@@ -13,7 +10,7 @@ import jakarta.persistence.Id;
  * Se trocar JPA por MongoDB, só muda esta classe e o SpringDataConsoleRepository.
  */
 @Entity
-// @Table(name = "console")
+@Table(name = "console")
 public class ConsoleJpaEntity {
 
     @Id

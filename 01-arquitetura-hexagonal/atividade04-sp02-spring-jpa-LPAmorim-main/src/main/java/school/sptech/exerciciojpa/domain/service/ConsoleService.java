@@ -1,5 +1,6 @@
 package school.sptech.exerciciojpa.domain.service;
 
+import school.sptech.exerciciojpa.domain.exception.ConsoleNoContentException;
 import school.sptech.exerciciojpa.domain.model.Console;
 import java.util.List;
 
@@ -44,6 +45,12 @@ public class ConsoleService implements ConsoleUseCase {
 
     @Override
     public List<ConsoleResponseDto> findAll() {
+        List<Console> consoles = repositoryPort.findAll();
+
+        if (consoles.isEmpty()) {
+            throw new ConsoleNoContentException("Consoles não encontrado");
+        }
+
         return repositoryPort.findAll().stream()
                 .map(ConsoleWebMapper::toResponse)
                 .toList();

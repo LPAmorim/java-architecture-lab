@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import school.sptech.exerciciojpa.domain.exception.ConsoleNoContentException;
 import school.sptech.exerciciojpa.domain.exception.ConsoleNotFoundException;
 import school.sptech.exerciciojpa.domain.exception.DuplicateConsoleException;
 
@@ -27,6 +28,11 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(ConsoleNotFoundException.class)
     public ResponseEntity<String> handleConsoleNotFound(ConsoleNotFoundException ex) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(ConsoleNoContentException.class)
+    public ResponseEntity<String> handleConsoleNoContent(ConsoleNoContentException ex) {
+        return ResponseEntity.noContent().build();
     }
 
     // Exceção de negócio: nome+fabricante duplicado → 409

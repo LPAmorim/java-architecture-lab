@@ -47,7 +47,7 @@ public class JpaConsoleRepository implements ConsoleRepositoryPort {
 
     @Override
     public List<Console> findByFabricante(String fabricante) {
-        return repository.findByFabricante(fabricante).stream()
+        return repository.findByFabricanteContainingIgnoreCase(fabricante).stream()
                 .map(ConsolePersistenceMapper::toDomain)
                 .toList();
     }
