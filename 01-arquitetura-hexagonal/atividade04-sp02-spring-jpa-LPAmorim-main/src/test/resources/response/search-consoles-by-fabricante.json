@@ -1,0 +1,37 @@
+[
+  {
+    "id": 12,
+    "fabricante": "Microsoft",
+    "geracao": 6,
+    "nome": "Xbox",
+    "preco": 299.99
+  },
+  {
+    "id": 14,
+    "fabricante": "Microsoft",
+    "geracao": 7,
+    "nome": "Xbox 360",
+    "preco": 399.99
+  },
+  {
+    "id": 18,
+    "fabricante": "Microsoft",
+    "geracao": 8,
+    "nome": "Xbox One",
+    "preco": 499.99
+  },
+  {
+    "id": 21,
+    "fabricante": "Microsoft",
+    "geracao": 9,
+    "nome": "Xbox Series X",
+    "preco": 499.99
+  },
+  {
+    "id": 22,
+    "fabricante": "Microsoft",
+    "geracao": 9,
+    "nome": "Xbox Series S",
+    "preco": 299.99
+  }
+]

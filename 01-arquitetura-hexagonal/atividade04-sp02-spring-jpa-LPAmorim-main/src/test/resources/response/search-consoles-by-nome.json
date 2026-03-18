@@ -1,0 +1,44 @@
+[
+  {
+    "id": 4,
+    "fabricante": "Nintendo",
+    "geracao": 3,
+    "nome": "Nintendo Entertainment System",
+    "preco": 179.99
+  },
+  {
+    "id": 6,
+    "fabricante": "Nintendo",
+    "geracao": 4,
+    "nome": "Super Nintendo Entertainment System",
+    "preco": 199.99
+  },
+  {
+    "id": 9,
+    "fabricante": "Nintendo",
+    "geracao": 5,
+    "nome": "Nintendo 64",
+    "preco": 199.99
+  },
+  {
+    "id": 13,
+    "fabricante": "Nintendo",
+    "geracao": 6,
+    "nome": "Nintendo GameCube",
+    "preco": 199.99
+  },
+  {
+    "id": 16,
+    "fabricante": "Nintendo",
+    "geracao": 7,
+    "nome": "Nintendo Wii",
+    "preco": 249.99
+  },
+  {
+    "id": 19,
+    "fabricante": "Nintendo",
+    "geracao": 8,
+    "nome": "Nintendo Switch",
+    "preco": 299.99
+  }
+]
