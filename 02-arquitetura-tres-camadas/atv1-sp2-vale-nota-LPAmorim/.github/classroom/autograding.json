@@ -1,0 +1,214 @@
+{
+  "tests": [
+    {
+      "name": "[1pt] Listar tarefas existentes",
+      "setup": "",
+      "run": "./mvnw -q test -Dcucumber.filter.tags=\"@listar-tarefas\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 1
+    },
+    {
+      "name": "[1pt] Listar tarefas - lista vazia (204)",
+      "setup": "",
+      "run": "./mvnw -q test -Dcucumber.filter.tags=\"@listar-vazia\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 1
+    },
+    {
+      "name": "[1pt] Buscar tarefa por ID existente",
+      "setup": "",
+      "run": "./mvnw -q test -Dcucumber.filter.tags=\"@buscar-id\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 1
+    },
+    {
+      "name": "[1pt] Buscar por status - resultados encontrados",
+      "setup": "",
+      "run": "./mvnw -q test -Dcucumber.filter.tags=\"@buscar-status\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 1
+    },
+    {
+      "name": "[1pt] Buscar por status - sem resultados (204)",
+      "setup": "",
+      "run": "./mvnw -q test -Dcucumber.filter.tags=\"@buscar-status-vazio\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 1
+    },
+    {
+      "name": "[1pt] Buscar por título - resultados encontrados",
+      "setup": "",
+      "run": "./mvnw -q test -Dcucumber.filter.tags=\"@buscar-titulo\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 1
+    },
+    {
+      "name": "[1pt] Buscar por título - sem resultados (204)",
+      "setup": "",
+      "run": "./mvnw -q test -Dcucumber.filter.tags=\"@buscar-titulo-vazio\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 1
+    },
+    {
+      "name": "[2pts] Buscar tarefa por ID inexistente (404)",
+      "setup": "",
+      "run": "./mvnw -q test -Dcucumber.filter.tags=\"@buscar-id-inexistente\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 2
+    },
+    {
+      "name": "[2pts] Remover tarefa existente (204)",
+      "setup": "",
+      "run": "./mvnw -q test -Dcucumber.filter.tags=\"@remover-tarefa\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 2
+    },
+    {
+      "name": "[2pts] Remover tarefa inexistente (404)",
+      "setup": "",
+      "run": "./mvnw -q test -Dcucumber.filter.tags=\"@remover-inexistente\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 2
+    },
+    {
+      "name": "[2pts] Buscar por status inválido (400)",
+      "setup": "",
+      "run": "./mvnw -q test -Dcucumber.filter.tags=\"@buscar-status-invalido\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 2
+    },
+    {
+      "name": "[2pts] Contagem de tarefas por status",
+      "setup": "",
+      "run": "./mvnw -q test -Dcucumber.filter.tags=\"@contagem-status\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 2
+    },
+    {
+      "name": "[2pts] Cadastrar tarefa com dados válidos (201)",
+      "setup": "",
+      "run": "./mvnw -q test -Dcucumber.filter.tags=\"@cadastrar-tarefa\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 2
+    },
+    {
+      "name": "[2pts] Cadastrar tarefa - título em branco (400)",
+      "setup": "",
+      "run": "./mvnw -q test -Dcucumber.filter.tags=\"@cadastrar-titulo-branco\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 2
+    },
+    {
+      "name": "[2pts] Cadastrar tarefa - descrição em branco (400)",
+      "setup": "",
+      "run": "./mvnw -q test -Dcucumber.filter.tags=\"@cadastrar-descricao-branca\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 2
+    },
+    {
+      "name": "[2pts] Atualizar tarefa com dados válidos (200)",
+      "setup": "",
+      "run": "./mvnw -q test -Dcucumber.filter.tags=\"@atualizar-tarefa\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 2
+    },
+    {
+      "name": "[3pts] Cadastrar tarefa - título acima de 100 caracteres (400)",
+      "setup": "",
+      "run": "./mvnw -q test -Dcucumber.filter.tags=\"@cadastrar-titulo-longo\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 3
+    },
+    {
+      "name": "[3pts] Cadastrar tarefa - título duplicado (409)",
+      "setup": "",
+      "run": "./mvnw -q test -Dcucumber.filter.tags=\"@cadastrar-duplicado\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 3
+    },
+    {
+      "name": "[3pts] Atualizar tarefa inexistente (404)",
+      "setup": "",
+      "run": "./mvnw -q test -Dcucumber.filter.tags=\"@atualizar-inexistente\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 3
+    },
+    {
+      "name": "[3pts] Atualizar tarefa - título duplicado (409)",
+      "setup": "",
+      "run": "./mvnw -q test -Dcucumber.filter.tags=\"@atualizar-duplicado\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 3
+    },
+    {
+      "name": "[3pts] Atualizar tarefa - payload inválido (400)",
+      "setup": "",
+      "run": "./mvnw -q test -Dcucumber.filter.tags=\"@atualizar-invalido\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 60,
+      "points": 3
+    }
+  ]
+}
