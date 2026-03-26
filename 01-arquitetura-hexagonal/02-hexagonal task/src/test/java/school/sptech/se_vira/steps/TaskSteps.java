@@ -5,12 +5,16 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import school.sptech.se_vira.adapter.out.persister.SpringDataTaskRepository;
+import school.sptech.se_vira.adapter.out.persister.repository.JpaTaskRepository;
+import school.sptech.se_vira.domain.port.out.TaskRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import school.sptech.se_vira.repository.TaskRepository;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,7 +32,7 @@ public class TaskSteps {
     private ObjectMapper objectMapper;
 
     @Autowired
-    private TaskRepository taskRepository;
+    private SpringDataTaskRepository taskRepository;
 
     @Autowired
     private StepContext ctx;

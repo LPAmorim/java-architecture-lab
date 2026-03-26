@@ -1,13 +1,20 @@
-package school.sptech.se_vira.repository;
+package school.sptech.se_vira.domain.port.out;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import school.sptech.se_vira.model.Task;
-import school.sptech.se_vira.model.TaskStatus;
+import school.sptech.se_vira.domain.model.Task;
+import school.sptech.se_vira.domain.model.TaskStatus;
 
 import java.util.List;
 import java.util.Optional;
 
-public interface TaskRepository extends JpaRepository<Integer, Task> {
+public interface TaskRepository {
+
+    List<Task> findAll();
+    
+    Optional<Task> findById(Integer id);
+    
+    Task save(Task task);
+
+    void deleteById(Integer id);
 
     Optional<Task> findByTitleIgnoreCase(String title);
 

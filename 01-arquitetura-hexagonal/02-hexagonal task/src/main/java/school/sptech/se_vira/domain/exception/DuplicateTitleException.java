@@ -1,4 +1,4 @@
-package school.sptech.se_vira.exception;
+package school.sptech.se_vira.domain.exception;
 
 public class DuplicateTitleException extends RuntimeException {
 
